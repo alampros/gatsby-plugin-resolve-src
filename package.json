@@ -1,0 +1,20 @@
+{
+  "name": "gatsby-plugin-resolve-src",
+  "version": "1.0.0",
+  "description": "Gatsby plugin to allow resolving imports from the src subdirectory",
+  "main": "gatsby-node.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alampros/gatsby-plugin-resolve-src.git"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin"
+  ],
+  "author": "Aaron Lampros <alampros@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alampros/gatsby-plugin-resolve-src/issues"
+  },
+  "homepage": "https://github.com/alampros/gatsby-plugin-resolve-src#readme"
+}
