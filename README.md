@@ -1,7 +1,7 @@
 # gatsby-plugin-resolve-src
 Gatsby plugin to resolve imports from your project's `/src` directory
 
-This plugin modifies your webpack `resolve` node to allow imports from your `/src` directory, such as:
+This plugin modifies your webpack config to allow imports from your `/src` directory, such as:
 
 ```js
 import MyComponent from 'components/MyComponent'
@@ -31,3 +31,26 @@ Then add it to your `gatsby-config.js`:
 }
 ```
 
+## Options
+
+### `addSassLoader` (bool)
+
+Default: `true`
+
+Adds `sass-loader` options to allow the `lib-sass` resolver to search your `/src` directory.
+
+To disable:
+
+```js
+module.exports = {
+  plugins: [
+    'gatsby-plugin-sass',
+    {
+      resolve: 'gatsby-plugin-resolve-src',
+      options: {
+        addSassLoader: false,
+      },
+    },
+  ],
+}
+```
