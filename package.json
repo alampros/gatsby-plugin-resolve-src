@@ -1,19 +1,8 @@
 {
   "name": "gatsby-plugin-resolve-src",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Gatsby plugin to allow resolving imports from the src subdirectory",
   "main": "gatsby-node.js",
-  "scripts": {
-    "build": "babel src --out-dir . --ignore __tests__",
-    "prepare": "cross-env NODE_ENV=production npm run build",
-    "watch": "babel -w src --out-dir . --ignore __tests__"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "cross-env": "^5.0.5"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alampros/gatsby-plugin-resolve-src.git"
