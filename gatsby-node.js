@@ -16,9 +16,8 @@ exports.modifyWebpackConfig = ({ config, _stage }, pluginOptions = optionDefault
     }
   }
   if(addSassLoader) {
-    const sassLoader = Object.assign({}, config.sassLoader || {})
     const otherPaths = (config.sassLoader && config.sassLoader.includePaths) || []
-    const includePaths: [srcDir].concat(otherPaths)
+    const includePaths = [srcDir].concat(otherPaths)
     cfg.sassLoader = {
       includePaths,
     }
