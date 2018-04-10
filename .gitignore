@@ -57,3 +57,8 @@ typings/
 # dotenv environment variables file
 .env
 
+/gatsby-node.js
+/gatsby-ssr.js
+/gatsby-browser.js
+/common.js
+/app-shell.js
