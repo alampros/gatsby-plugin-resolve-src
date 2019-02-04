@@ -1,6 +1,6 @@
 {
   "name": "gatsby-plugin-resolve-src",
-  "version": "2.0.0-beta.1",
+  "version": "2.0.0",
   "description": "Gatsby plugin to allow resolving imports from the src subdirectory",
   "main": "gatsby-node.js",
   "repository": {
