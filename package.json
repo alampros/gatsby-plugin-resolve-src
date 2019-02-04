@@ -1,6 +1,6 @@
 {
   "name": "gatsby-plugin-resolve-src",
-  "version": "1.1.4",
+  "version": "2.0.0-beta.1",
   "description": "Gatsby plugin to allow resolving imports from the src subdirectory",
   "main": "gatsby-node.js",
   "repository": {
@@ -12,7 +12,7 @@
     "gatsby-plugin"
   ],
   "peerDependencies": {
-    "gatsby": "<2.0.0"
+    "gatsby": ">2.0.0-alpha"
   },
   "author": "Aaron Lampros <alampros@gmail.com>",
   "license": "MIT",

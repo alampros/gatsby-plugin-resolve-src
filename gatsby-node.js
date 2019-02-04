@@ -1,26 +1,9 @@
 const path = require('path')
 
-const optionDefaults = {
-  addSassLoader: true,
-}
-exports.modifyWebpackConfig = ({ config, _stage }, pluginOptions = optionDefaults) => {
-  const {
-    addSassLoader,
-  } = pluginOptions
-
-  const srcDir = path.resolve(config._config.context, 'src')
-
-  const cfg = {
+exports.onCreateWebpackConfig = ({ stage, actions }) => {
+  actions.setWebpackConfig({
     resolve: {
-      root: srcDir,
-    }
-  }
-  if(addSassLoader) {
-    const otherPaths = (config.sassLoader && config.sassLoader.includePaths) || []
-    const includePaths = [srcDir].concat(otherPaths)
-    cfg.sassLoader = {
-      includePaths,
-    }
-  }
-  return config.merge(cfg)
+      modules: [path.resolve(__dirname, '../../src'), 'node_modules'],
+    },
+  })
 }
