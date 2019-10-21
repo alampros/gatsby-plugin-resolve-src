@@ -31,6 +31,26 @@ Then add it to your `gatsby-config.js`:
 }
 ```
 
+## VSCode Configuration
+
+You have to tell VS Code how to find your modules by creating a `tsconfig.json` (or `jsconfig.json`) file in your project root. For example:
+
+```json
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "*": [
+        "types/*",
+        "*"
+      ]
+    }
+  },
+}
+```
+
+See [#9](https://github.com/alampros/gatsby-plugin-resolve-src/issues/9) for more info.
+
 ## Options
 
 ### `addSassLoader` (bool)
