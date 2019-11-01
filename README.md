@@ -51,6 +51,24 @@ You have to tell VS Code how to find your modules by creating a `tsconfig.json` 
 
 See [#9](https://github.com/alampros/gatsby-plugin-resolve-src/issues/9) for more info.
 
+## ESLint Configuration
+
+If using `eslint-plugin-import`, you have to tell ESLint how to find your modules by configuring the default `node` resolver in your eslint config. For example:
+
+```json
+{
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": ["node_modules", "src"]
+      }
+    }
+  }
+}
+```
+
+If your project is linting filetypes besides `.js`, you will have to add them explicitly. See the node resolver [documentation](https://www.npmjs.com/package/eslint-import-resolver-node) for more details.
+
 ## Options
 
 ### `addSassLoader` (bool)
