@@ -71,24 +71,21 @@ If your project is linting filetypes besides `.js`, you will have to add them ex
 
 ## Options
 
-### `addSassLoader` (bool)
+### `srcPath` (file path)
 
-Default: `true`
+Default: `path.resolve(__dirname, '../../src')`
 
-Adds `sass-loader` options to allow the `lib-sass` resolver to search your `/src` directory.
+The full path to your `/src` directory.
 
-To disable:
+#### Yarn Workspaces
 
-```js
-module.exports = {
-  plugins: [
-    'gatsby-plugin-sass',
-    {
-      resolve: 'gatsby-plugin-resolve-src',
-      options: {
-        addSassLoader: false,
-      },
-    },
-  ],
-}
+To resolve your `src` directory when using yarn workspaces, use the srcPath option:
+
+```
+{
+  resolve: 'gatsby-plugin-resolve-src',
+  options: {
+    srcPath: path.resolve(__dirname, 'src'),
+  },
+},
 ```
